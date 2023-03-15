@@ -106,12 +106,3 @@ main {
   width: auto;
 }
   
-  /* Media Query for Small Screens */
-  @media only screen and (max-width: 1000px) {
-  
-    /* Navigation Bar Styles */
-    nav ul{
-      display:none;
-      flex-direction:row;
-    }
-  }
