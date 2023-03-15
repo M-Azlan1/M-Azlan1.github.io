@@ -1,13 +1,20 @@
-// when the "submit-button" is clicked, the contents of the contact-page are replaced with a single <p> element that reads "Thank you for your message" in size 24 font.
+const form = document.getElementById('contact-page');
+const submitButton = document.getElementById('submit-button');
 
-// hint: you can change the style of an element by modifying the value of that element's .style.fontSize, or by updating its .classList.
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent default form submission
 
-var formData = document.getElementById("contact-page");
-var button = document.getElementById("submit-button");
+  // get input values
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-function submitForm() {
-    formData.style.fontSize = "50px";
-    formData.innerHTML = "<section>Thank you for your message!</section>";
-}
-
-button.addEventListener("click", submitForm);
+  // check if input values are not empty
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill out all fields.'); // show error message if any field is empty
+  } else {
+    // display thank you message
+    const section = document.querySelector('section');
+    section.innerHTML = '<h2>Thank you for contacting me!</h2><p>I will get back to you as soon as possible.</p>';
+  }
+});
