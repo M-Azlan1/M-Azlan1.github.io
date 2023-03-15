@@ -1,0 +1,117 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Center the navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Style the links in the navigation bar */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  background-color: #6181db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Center the welcome section */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url(../images/image.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.welcome h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+/* Style the about-me section */
+.about-me {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.about-me h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Center the page content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+/* profile photo */
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background-image: url(./images/profile-photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+  
+  /* Media Query for Small Screens */
+  @media only screen and (max-width: 1000px) {
+  
+    /* Navigation Bar Styles */
+    nav ul{
+      display:none;
+      flex-direction:column;
+    }
+  }

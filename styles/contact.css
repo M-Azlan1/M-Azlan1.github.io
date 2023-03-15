@@ -1,0 +1,106 @@
+/* Set default font and margin/padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: rgb(203, 223, 221); */
+  }
+  
+  /* Style the header with a background image */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url(../images/image.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  /* Style the header text */
+  header h1 {
+    color: rgb(252, 247, 247);
+    font-size: 3rem;
+    text-shadow: 2px 2px #000;
+  }
+  
+/* Center the navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Style the links in the navigation bar */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  background-color: #6181db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+  
+  /* Style the contact form */
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(233, 222, 222);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(5, 5, 5, 0.3);
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1
+  }

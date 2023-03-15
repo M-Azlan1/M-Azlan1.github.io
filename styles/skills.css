@@ -1,0 +1,129 @@
+/* Set default font and margin/padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: rgb(203, 223, 221); */
+  }
+
+  /* Style the header with a background image */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url(../images/image.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  /* Style the header text */
+  header h1 {
+    color: rgb(252, 247, 247);
+    font-size: 3rem;
+    text-shadow: 2px 2px #000;
+  }
+  
+/* Center the navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Style the links in the navigation bar */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  background-color: #6181db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+  /* Style the body */
+body {
+  background-color: #f2f2f2;
+  line-height: 1.5;
+}
+
+/* Style the section headers */
+section h2 {
+  font-size: 2rem;
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+/* Style the section content */
+section ul {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+/* Style the contact form */
+form {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+form label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+form textarea {
+  height: 150px;
+}
+
+form input[type="submit"] {
+  background-color: rgb(35, 11, 66);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(35, 11, 66);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
