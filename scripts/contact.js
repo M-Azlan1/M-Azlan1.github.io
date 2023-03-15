@@ -1,48 +1,27 @@
-// Get the form element
-const form = document.getElementById("contact-page");
+function validateForm() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
 
-// Get the input fields
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
-
-// Add an event listener to the form submit button
-form.addEventListener("submit", function(event) {
-  // Prevent the default form submission behavior
-  event.preventDefault();
-
-  // Validate the form inputs
-  let isValid = true;
-
+  // Check if the name field is empty
   if (nameInput.value.trim() === "") {
-    nameInput.classList.add("error");
-    isValid = false;
-  } else {
-    nameInput.classList.remove("error");
+    alert("Please enter your name.");
+    return false;
   }
 
-  if (emailInput.value.trim() === "" || !validateEmail(emailInput.value.trim())) {
-    emailInput.classList.add("error");
-    isValid = false;
-  } else {
-    emailInput.classList.remove("error");
+  // Check if the email field is empty or not a valid email format
+  const emailRegex = /^\S+@\S+\.\S+$/;
+  if (emailInput.value.trim() === "" || !emailRegex.test(emailInput.value.trim())) {
+    alert("Please enter a valid email address.");
+    return false;
   }
 
+  // Check if the message field is empty
   if (messageInput.value.trim() === "") {
-    messageInput.classList.add("error");
-    isValid = false;
-  } else {
-    messageInput.classList.remove("error");
+    alert("Please enter a message.");
+    return false;
   }
 
-  // Submit the form if it's valid
-  if (isValid) {
-    form.submit();
-  }
-});
-
-// Helper function to validate email addresses
-function validateEmail(email) {
-  const re = /\S+@\S+\.\S+/;
-  return re.test(email);
+  // If all validations pass, return true to submit the form
+  return true;
 }
