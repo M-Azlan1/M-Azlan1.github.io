@@ -112,6 +112,6 @@ main {
     /* Navigation Bar Styles */
     nav ul{
       display:none;
-      flex-direction:column;
+      flex-direction:row;
     }
   }
