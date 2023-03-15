@@ -6,22 +6,22 @@ function validateForm(event) {
   // Check if the name field is empty
   if (nameInput.value.trim() === "") {
     alert("Please enter your name.");
-    event.preventDefault();
-    return;
+    return false;
   }
 
   // Check if the email field is empty or not a valid email format
   const emailRegex = /^\S+@\S+\.\S+$/;
   if (emailInput.value.trim() === "" || !emailRegex.test(emailInput.value.trim())) {
     alert("Please enter a valid email address.");
-    event.preventDefault();
-    return;
+    return false;
   }
 
   // Check if the message field is empty
   if (messageInput.value.trim() === "") {
     alert("Please enter a message.");
-    event.preventDefault();
-    return;
+    return false;
   }
+
+  // If all validations pass, allow the form to submit
+  return true;
 }
