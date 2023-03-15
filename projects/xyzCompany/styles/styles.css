@@ -1,0 +1,154 @@
+/****************** YOUR NAME: 
+
+Some starter CSS has been provided. You are discouraged from modifying the starter CSS.
+
+The instructions describe the missing styling and layout that is needed; you will translate these into CSS declarations in the places indicated.
+
+*/
+
+/****************** page defaults ******************/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.fixed-width {
+    width: 600px;
+    margin: 0 auto; /* centers content on the screen */
+}
+
+.hidden {
+    display: none; /* hides elements that are needed for DOM */
+}
+
+.flex {
+    display: flex; 
+}
+
+/****************** typography ******************/
+
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+}
+
+/***  INSTRUCTIONS:
+
+- 1st level headings will be 32px.
+- 2nd level headings will be 24px.
+- 3rd level headings will be 18px and bold.
+- All footer text will be 12px.
+- Anchors will not be underlined until we hover over them.
+- Anchors in the header will be black.
+- There will be 15px of space under 2nd level headings and paragraphs.
+*/
+
+/*** INSERT YOUR WORK BELOW: ***/
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header a {
+  color: black;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+/****************** site-wide styling ******************/
+
+/***  INSTRUCTIONS:
+
+- The header and footer will be #c74365.
+- There will be 30px of space between the header and the main, and between the main and the footer.
+- Anchors in the header will be 18px.
+- The logo in the header will be 30px tall and wide, with 10px of space on all sides.
+- The top-level heading and the links in the header will have a line-height of 50px to center them within the header.
+- There will be enough space between the page heading and the links so the last link is flush with the edge of the page. (HINT: Guess-and-check method can be useful here!)
+- There will be 15px of space between each link.
+- The text in the footer will be centered, with 15px of space between the content and the edge of the footer.
+*/
+
+/*** INSERT YOUR WORK BELOW: ***/
+
+header, footer {
+    background-color: #c74365;
+}
+
+header {
+    margin-bottom: 30px;
+}
+  
+footer {
+    margin-top: 30px;
+}
+
+header a {
+    font-size: 18px;
+    line-height: 50px;
+}
+header img {
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+header h1, header nav {
+    line-height: 50px;
+    margin: 0 10px 0 0;
+}
+
+header nav a {
+    margin-right: 15px;
+  }
+
+footer {
+    text-align: center;
+    margin: 15px;
+}
+/****************** home page styling ******************/
+
+/***  INSTRUCTIONS:
+- Everything in the "italics" class will be italicized.
+- Each article will have a background colour of lightgray, space between content and border of 15px, and 15px of space around the element on each side.
+*/
+
+/*** INSERT YOUR WORK BELOW: ***/
+
+.italics {
+    font-style: italic;
+}
+
+article {
+    background-color: lightgray;
+    padding: 15px;
+    margin: 15px 0;
+}
