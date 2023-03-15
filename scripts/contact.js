@@ -1,28 +1,27 @@
-function validateForm() {
-    var name = document.forms["contactForm"]["name"].value;
-    var email = document.forms["contactForm"]["email"].value;
-    var message = document.forms["contactForm"]["message"].value;
-    var error = "";
+// Get the form element
+const contactForm = document.getElementById("contact-page");
 
-    if (name == "") {
-      error += "Name is required.\n";
-    }
+// Add an event listener to the form submit event
+contactForm.addEventListener("submit", (event) => {
+  // Prevent the form from submitting
+  event.preventDefault();
 
-    if (email == "") {
-      error += "Email is required.\n";
-    } else {
-      var emailRegex = /^\S+@\S+\.\S+$/;
-      if (!emailRegex.test(email)) {
-        error += "Invalid email format.\n";
-      }
-    }
+  // Get the form fields
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
 
-    if (message == "") {
-      error += "Message is required.\n";
-    }
+  // Get the values of the form fields
+  const nameValue = nameInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const messageValue = messageInput.value.trim();
 
-    if (error !== "") {
-      alert(error);
-      return false;
-    }
+  // Check if any of the fields are empty
+  if (nameValue === "" || emailValue === "" || messageValue === "") {
+    // Display an alert if any of the fields are empty
+    alert("Please fill in all the fields.");
+  } else {
+    // Submit the form if all the fields are filled
+    contactForm.submit();
   }
+});
