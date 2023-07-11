@@ -1,0 +1,121 @@
+﻿@*(Coded by: Muhammad, with help from Ali)*@
+
+@model RegistrationViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<head>
+    <title>Login - Travel Experts</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+    /* Define two columns */
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+</style>
+
+<form asp-controller="Account" asp-action="Register" method="post" novalidate>
+    <div class="row">
+<div class="col-md-6">
+    <div class="form-group">
+        <label asp-for="CustFirstName">First Name</label>
+        <input asp-for="CustFirstName" class="form-control" required />
+        <span asp-validation-for="CustFirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustLastName">Last Name</label>
+        <input asp-for="CustLastName" class="form-control" required />
+        <span asp-validation-for="CustLastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustAddress">Street Address</label>
+        <input asp-for="CustAddress" class="form-control" required />
+        <span asp-validation-for="CustAddress" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustCity">City</label>
+        <input asp-for="CustCity" class="form-control" required />
+        <span asp-validation-for="CustCity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustProv">Province</label>
+        <input asp-for="CustProv" class="form-control" required />
+        <span asp-validation-for="CustProv" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustPostal">Postal</label>
+        <input asp-for="CustPostal" class="form-control" required />
+        <span asp-validation-for="CustPostal" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label asp-for="CustCountry">Country</label>
+                <input asp-for="CustCountry" class="form-control" required value="Canada" />
+        <span asp-validation-for="CustCountry" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustHomePhone">Home Phone</label>
+        <input asp-for="CustHomePhone" class="form-control" required />
+        <span asp-validation-for="CustHomePhone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustBusPhone">Business Phone</label>
+        <input asp-for="CustBusPhone" class="form-control" required />
+        <span asp-validation-for="CustBusPhone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustEmail">Email</label>
+        <input asp-for="CustEmail" class="form-control" required />
+        <span asp-validation-for="CustEmail" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="Username">Username</label>
+        <input asp-for="Username" class="form-control" required />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" class="form-control" required />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+</div>
+    </div>
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn" style="padding: 10px 20px; margin-top:20px" name="submit" value="register">Register</button>
+    </div>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

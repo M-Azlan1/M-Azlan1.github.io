@@ -1,0 +1,153 @@
+﻿@*(Coded by: Muhammad, with help from Ali)*@
+
+
+@model IEnumerable<TravelExpertsData.Booking>
+
+@{
+    ViewData["Title"] = "Booking";
+}
+
+<h1>Amazing packages to your favorite destinations!</h1>
+<p>Explore the world with our exclusive travel packages that offer something for everyone. From breathtaking natural scenery to vibrant cultural experiences, our packages have it all.</p>
+<p>Choose your dream destination and start packing!</p>
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        background-color:black;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .card-img {
+        height: 200px;
+        position: relative;
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+     }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }
+
+    .card p {
+        margin-bottom: 10px;
+    }
+
+    .book-now-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+        .book-now-btn:hover {
+            background-color: #0069d9;
+        }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/Asia.jpg" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>Asian Expedition</h2>
+            <p>Experience the magic of Asia with this amazing package that includes airfare, hotel accommodations, and an eco tour. Explore the vibrant cities of Bangkok, Singapore, and Kuala Lumpur, and get up close with the local culture and traditions. Your trip also includes a visit to the stunning Angkor Wat temple complex in Cambodia, a UNESCO World Heritage site. </p>
+            <p><strong>Package includes:</strong></p>
+            <ul>
+                <li>14-day itinerary</li>
+                <li>5-star hotel accommodations</li>
+                <li>Round-trip airfare</li>
+                <li>Eco tour with experienced guide</li>
+                <li>All meals and activities included</li>
+            </ul>
+            <p>Package Price: $2800.00</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/Carabian.jpg" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>Caribbean New Year</h2>
+            <p>Celebrate the New Year in style with this luxurious Caribbean cruise. Your trip includes a week-long cruise on a top-rated cruise ship, with stops in some of the most beautiful and exotic islands in the Caribbean. You'll enjoy world-class dining, entertainment, and activities, and have plenty of time to relax and soak up the sun. </p>
+            <p><strong>Package includes:</strong></p>
+            <ul>
+                <li>7-day itinerary</li>
+                <li>Luxury cruise ship accommodations</li>
+                <li>All meals and activities included</li>
+                <li>New Year's Eve celebration on board</li>
+                <li>Ports of call in Jamaica, the Bahamas, and other Caribbean islands</li>
+            </ul>
+            <p>Package Price: $4800.00</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/Europe.jpg" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>European Vacation</h2>
+            <p>Experience the best of Europe with our 14-day rail pass package. Visit the iconic cities of Paris, Rome, and Berlin, and explore the picturesque towns and countryside of Austria and Switzerland.</p>
+            <p><strong>Package includes:</strong></p>
+            <ul>
+                <li>14-day Eurail pass</li>
+                <li>Accommodation at 3-star hotels</li>
+                <li>Travel insurance</li>
+                <li>City tours and activities</li>
+                <li>Entry to popular museums and landmarks</li>
+                <li>Local transportation (e.g. metro, bus, tram)</li>
+                <li>Meal vouchers to many fine-dining establishments across Europe</li>
+            </ul>
+            <p>Package Price: $3000.00</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/poly.jpg" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>Polynesian Paradise</h2>
+            <p>Escape to a tropical paradise with our 8-day all-inclusive Hawaiian vacation package. Enjoy breathtaking views, indulge in delicious cuisine, and unwind on pristine beaches.</p>
+            <p><strong>Package includes:</strong></p>
+            <ul>
+                <li>Round-trip airfare</li>
+                <li>7 nights in a luxurious beachfront resort</li>
+                <li>All meals and drinks</li>
+                <li>Island tour with professional guide</li>
+                <li>Hawaiian cultural activities, including lei-making and hula lessons</li>
+                <li>Unlimited access to resort amenities, including pool, spa, and fitness center</li>
+            </ul>
+            <p>Package Price: $3000.00</p>
+
+        </div>
+    </div>
+    @Html.ActionLink("See all package Availability and Book!", "Packages", "Packages", null, new { @class = "book-now-btn" })
+</div>
+

@@ -1,0 +1,115 @@
+﻿@*(Coded by: Muhammad, with help from Ali)*@
+
+
+@{
+    ViewData["Title"] = "Contact";
+}
+<h1>Meet The Team! We'd Love To Hear From You!</h1>
+<p> *due to a high volume of emails, it may take up to 3 business for a response from our team.</p>
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        background-color: black;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .card-img {
+        height: 300px;
+        position: relative;
+    }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }
+
+    .card p {
+        margin-bottom: 10px;
+    }
+
+    .book-now-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+        .book-now-btn:hover {
+            background-color: #0069d9;
+        }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/John.png" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>John Smith</h2>
+            <p>Ceo</p>
+            <p>	Phone Number: +1 (403) 402-4693 </p>
+            <p>Email: Jsmith@travelexperts.ca</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/Mike.png" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>Micheal Scott</h2>
+            <p>Vice President </p>
+            <p>Phone: +1 (403) 489-3276</p>
+            <p>Email: Mscott@travelexperts.ca</p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/Sasha.png" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>Sasha Peterson</h2>
+            <p>Manager </p>
+            <p>Phone: +1 (403) 890-6625</p>
+            <p>Email: Speterson@travelexperts.ca</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">
+            <img src="~/lib/images/poly.jpg" alt="Package Image">
+        </div>
+        <div class="card-info">
+            <h2>Travel Experts Calgary Office</h2>
+            <p>	Address: 32 travel road NW, T3J 0K4, Calgary, Alberta</p>
+            <p>Phone: +1(403) 299-9999 </p>
+            <p>Email: TravelExperts@info.ca </p>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,59 @@
+﻿@*(Coded by: Muhammad, with help from Ali)*@
+
+
+@model List<TravelExpertsData.Booking>
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+            <h2>Bookings</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Travel Package</th>
+                        <th>Booking Date</th>
+                        <th>Traveler Count</th>
+                        <th>Package Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var booking in Model)
+                    {
+                        <tr>
+                            <td>@booking.Package.PkgName</td>
+                            <td>@booking.BookingDate?.ToString("yyyy-MM-dd")</td>
+                            <td>@booking.TravelerCount</td>
+                            @if (booking.Package != null)
+                            {
+                                <td>@booking.Package.PkgBasePrice</td>
+                            }
+                            else
+                            {
+                                <td></td>
+                                <td></td>
+                            }
+                            <td>
+                                <form method="post" asp-action="Delete" asp-route-id="@booking.BookingId">
+                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="total-cost" placeholder="Total Cost" value="@ViewBag.TotalCost" readonly>
+                <label for="total-cost">Total Cost</label>
+            </div>
+        </div>
+    </div>
+</div>
